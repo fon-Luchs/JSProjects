@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1, user-scale=no">
+	<title>JS todo</title>
+	<link rel="shortcut icon" href="" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<main id="app">
+		<header>
+			<h1>TODO</h1>
+		</header>
+
+		<ul id="todo-list">
+			<li class="todo-item">
+				<input class="checkbox" type="checkbox"></input>
+				<label class="title"></label>
+				<input type="text" class="textfield">
+				<button class="edit">Изменить</button>
+				<button class="delete">Удалить</button>
+			</li>
+		</ul>
+
+		<form id="todo-form">
+			<input class="add-input" type="text">
+			<button class="add-button" type="submit">Добавить</button>
+		</form>
+
+	</main>
+
+	<script type="text/javascript" src="javascript/app.js"></script>
+</body>
+</html>
