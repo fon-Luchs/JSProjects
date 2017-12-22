@@ -1,0 +1,16 @@
+.content{
+	margin: 10px;
+	min-height: 700px;
+	padding-left:5px;
+	padding-right:5px;
+}
+
+.Upper{
+	      position:fixed;
+        bottom:0;
+        width:200px
+}
+
+body{
+	background-color:#7EFDFE;
+}

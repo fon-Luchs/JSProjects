@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/materialize.min.css" media="screen,projection"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<title>Wladislaw fon Luchs</title>
+</head>
+<body>
+<!--NAVIGATION-->
+  <nav>
+    <div class="nav-wrapper main_color_theme">
+      <a href="#!" class="brand-logo center"><i class="material-icons">change_history</i></a>
+      <ul class="left hide-on-med-and-down">
+        <li><a href="">About me</a></li>
+        <li><a href="">My Projects</a></li>
+      </ul>
+    </div>
+  </nav>	
+<!--END NAVIGATION-->
+	<div class="parallax-container">
+    <div class="parallax"><img src="img/The-Big-Lebowski-The-Dudes-Sweater.jpg"></div>
+  </div>	
+<!--MAIN-->
+	<main class="main_content">
+		<div class="content">
+			<div class="row">
+				<h1 class="col 16 s12">
+					Let's talk about lazy programming languages
+				</h1>
+			</div>
+			<div class="row ">
+				<div class="col s6 m6 push-s6">
+					<div class="card blue-grey darken-1">
+						<div class="card-content white-text">
+						<span class="card-title">in particular, we will talk about the OFP and everyone's favorite Haskell</span>
+						<p>About haskell and OFP</p>
+
+						</div>
+						<div class="card-action">
+							<a href="https://lurkmore.to/Haskell">Haskell!</a>
+							<a href="https://habrahabr.ru/post/142351/">OFP and some cry</a>
+
+						</div>
+					</div>
+				</div>
+				<div class="col s6 m6 push-s6">
+					<section>
+					<h3>What is lazy programming</h3>
+					<p>Lazy evaluation is a method to evaluate a Haskell program. It means that expressions are not evaluated when they are bound to variables, but their evaluation is deferred until their results are needed by other computations. In consequence, arguments are not evaluated before they are passed to a function, but only when their values are actually used.
+
+					Technically, lazy evaluation means call-by-name plus Sharing. A kind of opposite is eager evaluation.
+					</p>
+				</div>
+				<p>
+					Lazy evaluation is part of operational semantics, i.e. how a Haskell program is evaluated. The counterpart in denotational semantics, i.e. what a Haskell program computes, is called Non-strict semantics. This semantics allows one to bypass undefined values (e.g. results of infinite loops) and in this way it also allows one to process formally infinite data.
+					While lazy evaluation has many advantages, its main drawback is that memory usage becomes hard to predict. The thing is that while two expressions, <code>like 2+2 :: Int 
+					and 4 :: Int </code>
+					, may denote the same value 4, they may have very different sizes and hence use different amounts of memory. 
+				</section>
+				<section></section>
+					<h3>Some practic in simple eaxample</h3>
+					<p>
+						let's write a simple program that will generate a random sheet and then sort it and summarize the positive elements
+					</p>
+					<p>
+						At аirst generate list random elements
+					</p>
+					<blockquote><font>import</font>&nbsp;System.Random&nbsp;<font>&#40;</font>randomRIO<font>&#41;</font><br/>
+						&nbsp;<br/>
+						randomList&nbsp;<font color="#339933">::</font>&nbsp;<font color="#cccc00">Int</font>&nbsp;<font color="#339933">-&gt;</font>&nbsp;<font color="#cccc00">IO</font><font>&#40;</font><font>&#91;</font><font color="#cccc00">Int</font><font>&#93;</font><font>&#41;</font><br/>
+						randomList&nbsp;<font>0</font>&nbsp;<font color="#339933">=</font>&nbsp;<font>return</font>&nbsp;<font>&#91;</font><font>&#93;</font><br/>
+						randomList&nbsp;n&nbsp;<font color="#339933">=</font>&nbsp;<font>do</font><br/>
+						&nbsp;&nbsp;r&nbsp;&nbsp;<font color="#339933">&lt;-</font>&nbsp;randomRIO&nbsp;<font>&#40;</font><font color="#339933">-</font><font>36</font>,<font>42</font><font>&#41;</font><br/>
+						&nbsp;&nbsp;rs&nbsp;<font color="#339933">&lt;-</font>&nbsp;randomList&nbsp;<font>&#40;</font>n<font color="#339933">-</font><font>1</font><font>&#41;</font><br/>
+						&nbsp;&nbsp;<font>return</font>&nbsp;<font>&#40;</font>r<font color="#339933">:</font>rs<font>&#41;</font>&nbsp;<br/>
+						&nbsp;<br/>
+						&nbsp;<br/>
+						&nbsp;</blockquote>
+						<div class="row">
+						<div class="col s6">
+							<section>	
+							<h3>Oh shi... What's goin up???</h3>
+							<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore qui veniam optio voluptate incidunt, laudantium animi, non praesentium, doloribus commodi assumenda ex sapiente rerum quia suscipit, eos adipisci ipsum. Aliquam nesciunt sit necessitatibus accusantium dolores tenetur beatae ex blanditiis delectus dolorem odit ipsam quo magni, voluptates recusandae itaque nisi suscipit, reiciendis optio repellat cupiditate. Quae veniam tenetur, suscipit maiores sit earum nam, libero praesentium iste quam. Minus, libero accusantium architecto tenetur. Consequatur accusamus eligendi voluptatem fugiat enim vitae similique, aperiam fugit, quo non recusandae ad, ea aliquid nisi. Quos consectetur provident facere beatae ratione labore odio quae dicta repellendus, in eaque dolores architecto optio sint ipsum suscipit veniam porro cupiditate perferendis laudantium. Esse minus sequi, nemo sunt repellat officia suscipit quibusdam enim obcaecati perferendis beatae, recusandae et quisquam, cum magnam quis. Voluptas fugiat, magnam dolores hic totam, quidem nostrum soluta porro officiis nulla est perspiciatis tempora perferendis adipisci aut ipsum reiciendis quas libero excepturi, dignissimos aperiam. Ratione quisquam beatae, modi at quia ullam fugit eveniet accusantium, quod aut inventore, ipsum corporis eos neque cumque asperiores, tenetur consectetur! Magni eum temporibus autem perspiciatis officiis ea fugit ex molestiae officia quisquam, dolores sequi aliquam, saepe quaerat deleniti veritatis unde. Sequi, culpa id nisi atque minima asperiores doloribus dolores at molestias, inventore reiciendis, vero maiores non sunt enim natus molestiae adipisci totam consectetur, modi possimus a! Iure, consectetur quis magni dolorum. Ipsa doloribus delectus vitae tenetur nobis vero necessitatibus fugit obcaecati totam explicabo, nisi tempora perspiciatis, quae ullam enim accusantium reprehenderit quam soluta!</p>
+							</section>
+						</div>	
+		        <div class="col s5 ">
+		          <div class="card">
+		            <div class="card-image">
+		              <img src="img/a-texas-judge-cited-the-big-lebowski-in-a-legal-decision.jpg">
+		              <span class="card-title">Random in Haskell</span>
+		            </div>
+		            <div class="card-content">
+		              <p>Random in Haskell is a very specific explosive mixture. Since the idea of language, which consists in PURE functions that can not have side effects, it can not have either an object or a class, but without architecture and types of data in any way ... Therefore in Haskell there are classes with their own specific view of life. And these montra's sometimes give birth to a very heavy code which in the original sources should be easy ... Yes, good intentions, as they say</p>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		      <div class="row">	
+						<blockquote>listSort&nbsp;<font color="#339933">::</font>&nbsp;<font>&#91;</font><font color="#cccc00">Int</font><font>&#93;</font>&nbsp;<font color="#339933">-&gt;</font>&nbsp;<font>&#91;</font><font color="#cccc00">Int</font><font>&#93;</font><br/>
+						listSort&nbsp;<font>&#91;</font><font>&#93;</font>&nbsp;<font color="#339933">=</font>&nbsp;<font>&#91;</font><font>&#93;</font><br/>
+						listSort&nbsp;xs&nbsp;<font color="#339933">=</font>&nbsp;<font>&#91;</font>&nbsp;x&nbsp;<font color="#339933">|</font>&nbsp;x&nbsp;<font color="#339933">&lt;-</font>&nbsp;xs,&nbsp;x&nbsp;<font color="#339933">&gt;</font>&nbsp;<font>0</font><font>&#93;</font><br/>
+						&nbsp;</blockquote>
+						<section>	
+								<h3>SIMPLE CONTENT</h3>
+								<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, sint ullam ex reprehenderit praesentium in, doloremque atque rerum voluptate accusamus voluptates voluptatem distinctio, illo id minus soluta earum obcaecati. Laudantium voluptatibus eius cumque. Natus, ipsum, fugiat et aperiam tempora nulla laboriosam iure quos obcaecati odit excepturi, repellat praesentium maxime sint incidunt! Odio porro deleniti, expedita ullam nemo aut tenetur necessitatibus reprehenderit amet impedit dolores maxime officia. Maiores dicta laudantium omnis repellendus delectus praesentium aut earum autem maxime deleniti sequi repudiandae amet incidunt obcaecati corrupti dignissimos placeat laborum quod magnam nemo, consectetur voluptatem ullam non odio dolor. Culpa voluptate voluptatem quae optio, doloremque rem, ullam ducimus commodi nesciunt consequatur, sequi delectus natus tempore assumenda. Aperiam veritatis at, expedita, voluptas cupiditate ducimus laudantium explicabo et unde rerum minus illo reprehenderit alias minima molestiae magnam modi ut nisi asperiores eligendi a. Magni molestias aliquam architecto fuga nesciunt optio, repudiandae ratione, porro perferendis perspiciatis nostrum dolore quo maxime, suscipit eos. Sed ullam perferendis modi.</p>
+						</section>
+		      </div>
+
+		      <div class="row">
+		      <blockquote>listSum&nbsp;<font color="#339933">::</font>&nbsp;<font>&#91;</font><font color="#cccc00">Int</font><font>&#93;</font>&nbsp;<font color="#339933">-&gt;</font>&nbsp;<font color="#cccc00">Int</font><br/>
+					listSum&nbsp;<font>&#91;</font><font>&#93;</font>&nbsp;&nbsp;<font color="#339933">=</font>&nbsp;<font>0</font><br/>
+					listSum&nbsp;<font>&#91;</font>x<font>&#93;</font>&nbsp;<font color="#339933">=</font>&nbsp;x<br/>
+					listSum&nbsp;<font>&#40;</font>x<font color="#339933">:</font>xs<font>&#41;</font>&nbsp;<font color="#339933">=</font>&nbsp;x&nbsp;<font color="#339933">+</font>&nbsp;listSum&nbsp;xs</blockquote>	
+						<section>
+							<h3>FINAL</h3>
+							<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime necessitatibus fugit velit ratione id, sed unde delectus at officiis tenetur nostrum provident fugiat neque non, ut reprehenderit voluptas et impedit animi? Enim cupiditate explicabo in neque ex eius, odio, atque officia fugit ea quod perspiciatis, quae quisquam consequuntur ab pariatur magnam dolores dicta distinctio accusantium inventore expedita? Eos, est. Maxime nam doloremque suscipit atque ut, natus eum excepturi accusantium, voluptatibus dignissimos aut molestiae, aliquid perferendis quam in. Placeat ipsam eius repudiandae quas tenetur. Rem dolorum dicta inventore illum unde voluptates dolores similique corporis quo cum quidem laborum optio explicabo quam illo non magnam distinctio, laudantium ipsa. Numquam voluptatem labore necessitatibus recusandae dignissimos, id praesentium sequi autem est fuga voluptates blanditiis minus reprehenderit odit provident a nisi iste dicta veritatis error explicabo nesciunt quasi. Vel vitae sint sit, magni modi inventore qui, in dignissimos iure nemo officia. Odit laboriosam atque eligendi ipsam, aperiam ut, quia quasi in voluptatibus hic error ipsa nulla repellendus quaerat eum fugit dolorum nihil eaque consectetur non modi. Error voluptatum expedita optio, mollitia, quaerat voluptatibus possimus laborum ab. Dolor impedit laboriosam expedita possimus reiciendis eius nobis dolores blanditiis dolore tenetur, at cupiditate voluptas qui quas ipsum asperiores esse nam sunt eaque aliquam saepe eum modi. Laudantium enim, fugiat vel illum inventore facere, repellat dolor architecto sapiente et voluptatibus quae eaque adipisci iure neque? Iure et magnam, possimus ipsum mollitia dignissimos totam voluptatibus saepe nulla, incidunt quo earum error, sit nostrum alias quae. Veniam minus assumenda laudantium beatae saepe aliquam repellat consectetur, non harum quibusdam aspernatur qui cupiditate sequi iusto veritatis possimus quia similique facere. Dolore eos omnis fuga enim est. Eaque, vel. Velit itaque expedita non veritatis dolor a commodi sunt adipisci eaque molestias ullam at, earum quasi, ratione debitis omnis consectetur! Earum iste quod voluptatum et reprehenderit, cum voluptas similique. Deleniti velit autem unde quaerat repellat nihil nam, atque quis!</p>
+						</section>
+		      </div>
+
+		      <div class="row">
+		      <blockquote>listOutput&nbsp;<font color="#339933">=</font>&nbsp;<font>print</font>&nbsp;<font color="#339933">$</font>&nbsp;listSum&nbsp;<font color="#339933">$</font>&nbsp;listSort&nbsp;<font color="#339933">$</font>&nbsp;randomList<br/>
+					&nbsp;</blockquote>	
+						<section>	
+								<h3>FINAL?</h3>
+								<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet unde nulla libero! In nesciunt ducimus rerum, explicabo suscipit amet deleniti quod dolorem dolores consequatur error animi repellendus molestiae debitis unde aperiam eaque ipsam vero repellat, itaque laboriosam est earum officia quibusdam molestias? Expedita aliquam modi eligendi neque, excepturi at corrupti, quo non eum iste nobis quam nemo recusandae ut nisi consequatur tempore, magni nesciunt cum optio. Voluptates iusto, nulla minima optio fugit soluta aperiam consequatur praesentium assumenda. Dicta deserunt veniam, nobis quae illo repellendus non aliquam magnam blanditiis quidem dolorum eligendi, modi labore aliquid, deleniti excepturi molestias minus suscipit cum tempora maiores animi explicabo. Fugiat dolore sint at optio neque ab, saepe eligendi quidem earum nihil incidunt pariatur porro illo quibusdam asperiores perferendis amet doloribus, omnis mollitia, cum adipisci! Dolore.</p>
+						<div class="col s12 ">
+		          <div class="card">
+		            <div class="card-image">
+		              <img src="img/CarelessRedJackrabbit-max-1mb.gif">
+		            </div>
+						</section>
+		      </div>
+				</section>
+			</div>
+
+		</div>
+	</main>
+<!--END MAIN-->	
+
+	<div class="parallax-container">
+    <div class="parallax"><img src="img/wallhaven-523652.jpg"></div>
+  </div>	
+
+<!--FOOTER-->
+<footer class="page-footer main_color_theme">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Wladislaw fon Luchs</h5>
+                <p class="grey-text text-lighten-4">lvo123ua@gmail.com</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">My personal links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="https://vk.com/id63623679">    
+										<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+									    <path fill="#00838f" d="M19.54,14.6C21.09,16.04 21.41,16.73 21.46,16.82C22.1,17.88 20.76,17.96 20.76,17.96L18.18,18C18.18,18 17.62,18.11 16.9,17.61C15.93,16.95 15,15.22 14.31,15.45C13.6,15.68 13.62,17.23 13.62,17.23C13.62,17.23 13.62,17.45 13.46,17.62C13.28,17.81 12.93,17.74 12.93,17.74H11.78C11.78,17.74 9.23,18 7,15.67C4.55,13.13 2.39,8.13 2.39,8.13C2.39,8.13 2.27,7.83 2.4,7.66C2.55,7.5 2.97,7.5 2.97,7.5H5.73C5.73,7.5 6,7.5 6.17,7.66C6.32,7.77 6.41,8 6.41,8C6.41,8 6.85,9.11 7.45,10.13C8.6,12.12 9.13,12.55 9.5,12.34C10.1,12.03 9.93,9.53 9.93,9.53C9.93,9.53 9.94,8.62 9.64,8.22C9.41,7.91 8.97,7.81 8.78,7.79C8.62,7.77 8.88,7.41 9.21,7.24C9.71,7 10.58,7 11.62,7C12.43,7 12.66,7.06 12.97,7.13C13.93,7.36 13.6,8.25 13.6,10.37C13.6,11.06 13.5,12 13.97,12.33C14.18,12.47 14.7,12.35 16,10.16C16.6,9.12 17.06,7.89 17.06,7.89C17.06,7.89 17.16,7.68 17.31,7.58C17.47,7.5 17.69,7.5 17.69,7.5H20.59C20.59,7.5 21.47,7.4 21.61,7.79C21.76,8.2 21.28,9.17 20.09,10.74C18.15,13.34 17.93,13.1 19.54,14.6Z" />
+									</svg> vk.com
+                  </a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://twitter.com/fon_Luchs">
+
+									<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+									    <path fill="#26c6da" d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
+									</svg>
+									twitter
+                  </a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/fon_luchs/">
+										
+										<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+										    <path fill="#ffffff" d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+										</svg>
+										Instagram
+                  </a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Copyright MIT License
+            <a class="grey-text text-lighten-4 right" href="https://github.com/fon-Luchs">
+
+							<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+							    <path fill="#212121" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+							</svg>
+            </a>
+            </div>
+          </div>
+        </footer>
+<!--END FOOTER-->
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+ 
+<script>
+$(document).ready(function(){
+	$(function () {
+		$('.parallax').parallax();
+		});
+});
+</script>
+
+	<script type="text/javascript" src="js/materialize.min.js">
+
+	</script>
+
+</body>
+</html>

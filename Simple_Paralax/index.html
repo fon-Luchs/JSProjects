@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/materialize.min.css" media="screen,projection"/>
+	<link rel="stylesheet" type="text/css" href="css/my_style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<title>Wladislaw fon Luchs</title>
+</head>
+<body>
+					<nav>
+	    			<div class="nav-wrapper">
+	      		<a href="#!" class="brand-logo center"><i class="material-icons">hdr_strong</i></a>
+	    			</div>
+	  			</nav>
+						
+					<main class="content">
+					 <div class="row">
+					 		  <div class="divider"></div>
+	  						<div class="section center-align">	
+	    					<h1>Introduce to material</h1>
+	    					   <div class="parallax-container">
+      						 <div class="parallax"><img src="img/a9aa6e313a3ef06a6ba3909cfbe9be21.png"></div>
+    							 </div>
+	    					<h2>What is Material?</h2>
+	    					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde repudiandae ipsa rerum cupiditate et deserunt natus reprehenderit a laudantium molestias molestiae earum perferendis eveniet modi hic nihil quos eligendi nulla repellat dolorem sit, inventore sed asperiores. Deserunt veritatis, ea possimus!</p>
+	    					<h2>Smth cool in materual desight</h2>
+	    					  <p>
+	    					  	<div class="parallax-container">
+      							<div class="parallax"><img src="img/google-now-wallpaper-1.png"></div>
+    								</div>
+	    					  <ul class="collection blue">
+							      <li class="collection-item">Simple</li>
+							      <li class="collection-item">Beautiful</li>
+							      <li class="collection-item">aesthetic pleasure</li>
+							      <li class="collection-item">Futuristic look at design</li>
+							    </ul>
+							  	</p>
+	  					</div>
+	  				<div class="video-container">
+        							<iframe width="853" height="480" src="https://www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+      			</div>
+      			<div class="divider"></div>
+	  						<div class="section center-align">
+		    					<h1>Some paralax</h1>
+		    					<p>move</p>
+	  						</div>
+      			</div>	
+					 	</div>
+				 	   	<div class="parallax-container">
+      				<div class="parallax"><img src="img/168045.jpg"></div>
+   					 	</div>
+						<div class="striped">
+							<table>
+								<thead>
+								<tr>
+								<th>Name</th>
+								<th>Item Name</th>
+								<th>Item Price</th>
+								</tr>
+								</thead>
+
+								<tbody>
+								<tr>
+								<td>Alvin</td>
+								<td>Eclair</td>
+								<td>$0.87</td>
+								</tr>
+								<tr>
+								<td>Alan</td>
+								<td>Jellybean</td>
+								<td>$3.76</td>
+								</tr>
+								<tr>
+								<td>Jonathan</td>
+								<td>Lollipop</td>
+								<td>$7.00</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					 <a href="#top" class="btn-floating btn-large waves-effect waves-light red Upper"><i class="material-icons">arrow_drop_up</i><i class="material-icons">arrow_drop_down</i></a>
+					</main>	
+
+
+	        <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            		<div class="ico"><i class="material-icons ">face</i></div>
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js">
+</script>
+ 
+<script>
+$(document).ready(function(){
+ 
+	$("#back-top").hide();
+ 
+	$(function () {
+		$('.parallax').parallax();
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				$('#top').fadeIn();
+			} else {
+				$('#top').fadeOut();
+			}
+		});
+ 
+		$('#top a').click(function () {
+			$('body,html').animate({
+				scrollTop: 1
+			}, 2000, 'swing' );
+			return false;
+		});
+	});
+ 
+});
+</script>
+
+	<script type="text/javascript" src="js/materialize.min.js">
+
+	</script>
+</body>
+</html>
